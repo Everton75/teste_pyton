@@ -5,7 +5,7 @@ print("\x1b[2J\x1b[1;1H") # este codigo limpa a tela
 population = []
 sample_size = 6
 tam_lista=0
-prompt = "\nDigite os números que você quer jogar"
+prompt = "Digite os números que você quer jogar"
 prompt += "\n"
 while True:
     city = input(prompt)
@@ -14,6 +14,8 @@ while True:
             sample_elements = sample(population, sample_size)
             sample_elements.sort() #ordena a lista
             print(sample_elements)
+            print(len(sample_elements)) # é para saber o tamanho da lista
+            
             break
         else:
             print("\x1b[2J\x1b[1;1H") # este codigo limpa a tela
@@ -28,7 +30,7 @@ while True:
             if (int(city)) in population:
                 print("Você já digitou este número!")
             else:     
-                population.append(int(city)) #problema aqui se digitar algo diferente  de inteiro
+                population.append(int(city)) #problema aqui se digitar ponto, virgula, olhar metodo isdigit():
                 tam_lista=len(population)
                 print(population)
 
