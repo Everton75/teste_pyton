@@ -22,6 +22,15 @@ while True:
             break
 
     else:
-        population.append(int(city)) #problema aqui se digitar algo diferente  de inteiro
-        tam_lista=len(population)
-        print(population)
+        if not city.isdigit():
+            print("Digite apenas números inteiros")
+        else:
+            if (int(city)) in population:
+                print("Você já digitou este número!")
+            else:     
+                population.append(int(city)) #problema aqui se digitar algo diferente  de inteiro
+                tam_lista=len(population)
+                print(population)
+
+
+  
